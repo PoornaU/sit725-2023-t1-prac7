@@ -36,6 +36,11 @@ const addProjectToApp = (project) => {
     });
 }
 
+let socket = io();
+socket.on('number' , (message)=>{
+    console.log('received freom server: ' + message);
+});
+
 $(document).ready(function(){
     $('.materialboxed').materialbox();
     $('.modal').modal();
